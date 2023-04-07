@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret Message</title>
+    <script>
+      function showMessage() {
+        document.getElementById("p1").innerHTML =
+          "Computer Science is awesome!";
+      }
+      function hideMessage() {
+        document.getElementById("p1").innerHTML = "Secret Message";
+      }
+    </script>
+  </head>
+  <body>
+    <p id="p1" onMouseOver="showMessage()" onMouseOut="hideMessage()">
+      Secret Message
+    </p>
+  </body>
+</html>

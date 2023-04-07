@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function myF(x, doStuff) {
+        doStuff(x);
+      }
+      myF("a", function (x) {
+        myF(x + "t", function (x) {
+          var result = x + x;
+          myF(result + "2", function (x) {
+            console.log(x + "!");
+          });
+        });
+      });
+      myF();
+    </script>
+  </body>
+</html>

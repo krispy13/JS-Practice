@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate a random sequence</title>
+  </head>
+  <body>
+    <div>
+      <form id="frm">
+        Number of random letter sequences to generate:
+        <input type="text" id="numSequences" /><br />
+        Length of each random letter sequence:
+        <input type="text" id="sequenceLength" /><br />
+        3. Letters to choose from:
+        <input type="text" id="letters" /><br /><br />
+        <input
+          type="button"
+          onclick="generateRandomSequence()"
+          value="Submit"
+        />
+      </form>
+    </div>
+    <script>
+      numSequences = document.getElementById("numSequences").submit();
+      sequenceLength = document.getElementById("sequenceLength").submit();
+      letters = document.getElementById("letters").submit();
+
+      function generateRandomSequence(numSequences, sequenceLength, letters) {
+        let sequences = [];
+        for (let i = 0; i < numSequences; i++) {
+          let sequence = "";
+          for (let j = 0; j < sequenceLength; j++) {
+            let randomIndex = Math.floor(Math.random() * letters.length);
+            sequence += letters[randomIndex];
+          }
+          sequences.push(sequence);
+        }
+        return sequences;
+        document.write("The random sequence is {sequences}");
+      }
+    </script>
+  </body>
+</html>

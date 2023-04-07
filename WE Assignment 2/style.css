@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+.cvHolder {
+  border: 2px solid rgba(0, 0, 0, 0.281);
+  height: 100vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.heading {
+  font-size: 24px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  background-color: rgba(128, 128, 128, 0.196);
+  padding: 10px;
+  letter-spacing: 1.5em;
+  word-spacing: 2em;
+}
+.personalData {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.personalData span {
+  font-style: italic;
+}
+.Education {
+  height: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.educationHolder {
+  display: flex;
+  justify-content: space-between;
+}
+.educationHolder div {
+  padding: 10px;
+}
+
+.professionalExperience {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.experienceHolder {
+  display: flex;
+  justify-content: space-between;
+}
+.experienceHolder div {
+  padding: 10px;
+}
+.experienceDate {
+  font-weight: bold;
+}
+.experienceInfo {
+  width: 60%;
+}

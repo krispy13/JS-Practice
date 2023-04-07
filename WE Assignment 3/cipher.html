@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>q4</title>
+</head>
+<body>
+
+<div class="form">
+  <label for="num">Enter a text: </label>
+  <input type = "text"
+         id = "num"
+         class = "guessField">
+  <input type = "submit"
+         value = "Submit"
+         class = "submitNum"
+         id = "submitnum">
+</div>
+
+<p id="answer"></p>
+<script type="text/javascript">
+  console.log("start");
+
+  document.getElementById("submitnum").onclick = function(){
+    console.log("triggered");
+
+    let x = document.getElementById("num").value;
+    console.log(x);
+    let len = x.length;
+    let res = "";
+
+    let rand = Math.floor(Math.random() * 25 + 1);
+
+    for(let i=0;i<len;i++){
+      console.log("entered loop")
+      let temp = x.charCodeAt(i) - 65;
+      temp += rand;
+      console.log(temp);
+      temp = temp%25;
+      console.log(temp);
+      temp+= 65;
+      console.log(temp);
+      res += String.fromCharCode(temp);
+    }
+
+    document.getElementById("answer").innerHTML = res;
+  }
+</script>
+</body>
+</html>

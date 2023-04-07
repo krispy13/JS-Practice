@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arithmetic Operations</title>
+  </head>
+  <body>
+    <h3>Enter two values:</h3>
+    <input type="text" id="num1" size="5" />
+    <input type="text" id="num2" size="5" />
+    <br /><br />
+    <button onclick="performOperations()">Calculate</button>
+    <br /><br />
+    <div id="result"></div>
+    <script>
+      function performOperations() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var add = num1 + num2;
+        var sub = num1 - num2;
+        var mul = num1 * num2;
+        var div = num1 / num2;
+        document.getElementById("result").innerHTML =
+          "Addition: " +
+          add +
+          "<br>" +
+          "Subtraction: " +
+          sub +
+          "<br>" +
+          "Multiplication: " +
+          mul +
+          "<br>" +
+          "Division: " +
+          div;
+      }
+    </script>
+  </body>
+</html>

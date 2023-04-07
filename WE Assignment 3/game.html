@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <script type="text/javascript">
+      var tries = 5;
+      var randomNumber = Math.floor(Math.random() * 100) + 1;
+      var userGuesses = [];
+
+      function checkGuess() {
+        var userGuess = document.getElementById("userGuess").value;
+
+        if (userGuesses.includes(userGuess)) {
+          alert(
+            "You have already guessed that number. Please guess a different number."
+          );
+          return;
+        }
+        userGuesses.push(userGuess);
+
+        tries--;
+
+        if (userGuess == randomNumber) {
+          alert("Congratulations! You have guessed the correct number.");
+          window.location.reload();
+        } else if (userGuess > randomNumber) {
+          alert(
+            "Sorry You guessed too high! You have " + tries + " tries left"
+          );
+        } else {
+          alert("Sorry You guessed too low! You have " + tries + " tries left");
+        }
+
+        if (tries == 0) {
+          alert(
+            "Sorry, you have run out of tries. The correct number was " +
+              randomNumber +
+              "."
+          );
+          window.location.reload();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Guessing Game</h1>
+    <p>Guess a number between 1 and 100. You have 5 tries.</p>
+    <input type="text" id="userGuess" />
+    <button onclick="checkGuess()">Guess</button>
+  </body>
+</html>

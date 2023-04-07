@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman";
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url(../Abu-Road-1.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+ul {
+  float: right;
+  list-style-type: none;
+  margin-top: 10px;
+}
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: solid;
+  color: #4ac2dd;
+  padding: 5px 20px;
+  border: 2px solid transparent#fff;
+}
+
+ul li a:hover {
+  background-color: #000;
+  color: #4ac2dd;
+  transition: 0.4 ease;
+}
+
+ul li.active a {
+  background-color: #000;
+  color: #4ac2dd;
+}
+.heritage {
+  color: #fff;
+  float: left;
+  padding-left: 250px;
+  padding-top: 10px;
+  width: 600px;
+  height: auto;
+  font-size: 30px;
+  font-family: "Times New Roman" bold;
+}
+.logo img {
+  float: left;
+  width: 120px;
+  height: auto;
+}
+
+.main {
+  max-width: 1500px;
+  margin: auto;
+}
+.btn-box {
+  display: flex;
+  border-bottom: 1px solid;
+}
+.btn-box button {
+  color: aliceblue;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1px 1px;
+  margin: 80px 0;
+  margin-right: 40px;
+  font-weight: bold;
+}
+.a1 {
+  width: 80%;
+  height: 640px;
+  position: relative;
+  margin: 100px auto;
+  overflow: hidden;
+}
+.content {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  color: #fff;
+  position: absolute;
+  transform: translateX(100%);
+  transition: 0.3s;
+  overflow: hidden;
+}
+.content-right img {
+  width: 480px;
+}
+.content-right {
+  flex-basis: 50%;
+}
+.content-right p {
+  padding: 20px 20px;
+}
+.content-left {
+  flex-basis: 50%;
+}

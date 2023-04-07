@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/gallery.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="main">
+        <div class="logo">
+          <img src="Abu-Road.jpg" alt="" />
+        </div>
+        <div class="gallery">Gallery</div>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="hotel.html">Hotel Booking</a></li>
+          <li class="active"><a href="#">Gallery</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="myProducts">
+      <div class="myProducts-gallery">
+        <img src="Dilwara Jain Temple.jpg" onclick="myImageFunction(this)" />
+        <img src="Guru Shikhar.jpg" onclick="myImageFunction(this)" />
+        <img src="AMA01.jpg" onclick="myImageFunction(this)" />
+        <img src="AMS01.jpg" onclick="myImageFunction(this)" />
+        <img src="Nakki Lake.jpg" onclick="myImageFunction(this)" />
+        <img src="Toad Rock View Point.jpg" onclick="myImageFunction(this)" />
+      </div>
+
+      <div class="image-container">
+        <img id="img-Box" src="Dilwara Jain Temple.jpg" alt="click here" />
+      </div>
+    </div>
+
+    <script>
+      function myImageFunction(productSmallImg) {
+        var productFullImg = document.getElementById("img-Box");
+        productFullImg.src = productSmallImg.src;
+      }
+    </script>
+  </body>
+</html>

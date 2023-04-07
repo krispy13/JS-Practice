@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valid</title>
+  </head>
+  <body>
+    <form>
+      <label for="cc-number">Credit Card Number:</label>
+      <input type="text" id="cc-number" name="cc-number" required />
+      <button type="button" onclick="checkCreditCard()">Check</button>
+      <p id="cc-result"></p>
+    </form>
+
+    <script>
+      function validateCreditCardNumber(number) {
+        if (!/^\d{16}$/.test(number)) {
+          return false;
+        }
+
+        if (/^(\d)\1{15}$/.test(number)) {
+          return false;
+        }
+
+        if (number.charAt(15) % 2 !== 0) {
+          return false;
+        }
+
+        let sum = 0;
+        for (let i = 0; i < 16; i++) {
+          sum += parseInt(number.charAt(i));
+        }
+        if (sum <= 16) {
+          return false;
+        }
+
+        return true;
+      }
+
+      function checkCreditCard() {
+        const ccNumber = document.getElementById("cc-number").value;
+        const isValid = validateCreditCardNumber(ccNumber);
+        const resultElement = document.getElementById("cc-result");
+        if (isValid) {
+          resultElement.textContent = "Credit card number is valid!";
+        } else {
+          resultElement.textContent = "Credit card number is not valid.";
+        }
+      }
+    </script>
+  </body>
+</html>

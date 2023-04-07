@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expand</title>
+    <style>
+      .collapsible {
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+        padding: 18px;
+        width: 60%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+      }
+
+      .active,
+      .collapsible:hover {
+        color: white;
+        background-color: #000;
+      }
+
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Select a subject</h2>
+    <button type="button" class="collapsible">Information Security</button>
+    <div class="content">
+      <p>
+        We're no strangers to love <br />
+        You know the rules and so do I <br />A full commitment's what I'm
+        thinking of <br />You wouldn't get this from any other guy
+      </p>
+    </div>
+    <button type="button" class="collapsible">Web Technology</button>
+    <div class="content">
+      <p>
+        I just wanna tell you how I'm feeling <br />Gotta make you understand
+      </p>
+    </div>
+    <button type="button" class="collapsible">Operating System</button>
+    <div class="content">
+      <p>
+        Never gonna give you up <br />Never gonna let you down <br />Never gonna
+        run around and desert you <br />Never gonna make you cry <br />Never
+        gonna say goodbye <br />Never gonna tell a lie and hurt you
+      </p>
+    </div>
+    <button type="button" class="collapsible">Theory of Computation</button>
+    <div class="content">
+      <p>
+        We've known each other for so long <br />Your heart's been aching, but
+        <br />You're too shy to say it <br />Inside, we both know what's been
+        going on <br />We know the game and we're gonna play it <br />And if you
+        ask me how I'm feeling <br />Don't tell me you're too blind to see
+      </p>
+    </div>
+    <button type="button" class="collapsible">Software Engineering</button>
+    <div class="content">
+      <p>
+        Never gonna give you up <br />Never gonna let you down <br />Never gonna
+        run around and desert you <br />Never gonna make you cry <br />Never
+        gonna say goodbye <br />Never gonna tell a lie and hurt you
+      </p>
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
