@@ -1,0 +1,37 @@
+#board {
+  height: 600px;
+  width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  height: 33.33%;
+}
+
+.block {
+  font-size: 25px;
+  background-color: red;
+  width: 33.33%;
+  height: 100%;
+  border: 2px white solid;
+  color: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block:hover {
+  background-color: darkred;
+  color: darkred;
+}
+
+.btns {
+  margin: auto;
+  width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

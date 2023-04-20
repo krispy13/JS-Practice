@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Task1</title>
+</head>
+</head>
+
+<body>
+ <h1>Random Letter Sequence Generator</h1>
+ <hr>
+ <table>
+  <tr>
+   <td>Number of random number sequences</td>
+   <td><input type="number" id="sequences"></td>
+  </tr><br>
+  <tr>
+   <td>Length of each random letter sequence</td>
+   <td><input type="number" id="length"></td>
+  </tr><br>
+  <tr>
+   <td>Letters to choose from</td>
+   <td><input type="text" id="characters"></td>
+  </tr>
+ </table>
+ <br>
+ <button onclick="randomise()">Click to generate letter sequence</button>
+ <br><br>
+ <div id="text" style="border: solid 2px black;height: 200px; width: 300px;">
+ </div>
+ </form>
+ <script src="app.js"></script>
+</body>
+
+</html>
