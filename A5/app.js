@@ -49,8 +49,8 @@ function checkCards() {
   var v2 = document.getElementById(card_2);
   if (v1.innerHTML == v2.innerHTML && card_1 != card_2) {
     total_cards += 2;
-    v1.style.backgroundColor = "orange";
-    v2.style.backgroundColor = "orange";
+    v1.style.backgroundColor = "aqua";
+    v2.style.backgroundColor = "aqua";
     console.log(total_cards);
     if (total_cards == 8) {
       alert("Game Finish");
